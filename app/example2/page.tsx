@@ -23,7 +23,7 @@ export default async function Example2({
       <h1 className="self-start text-black/80">Search</h1>
       <div className="card flex gap-5 w-full h-3/4 !p-0">
         {/* sidebar */}
-        <section className="w-1/5 border-r">
+        <section className="border-r min-w-[300px] w-[300px]">
           <SearchBar />
           {/* filters */}
           <div className="flex flex-col gap-8 justify-between items-start p-3 border-black/10">
