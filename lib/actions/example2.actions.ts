@@ -103,7 +103,9 @@ const db = {
       if (filters.name && !item.name.includes(filters.name)) return false;
       if (filters.price && Number(item.price) > Number(filters.price))
         return false;
-      if (filters.category && item.category !== filters.category) return false;
+      if (filters.category && item.category !== filters.category) {
+        if (filters.category !== "all") return false;
+      }
       if (
         filters.search &&
         !item.name.toLowerCase().includes(filters.search.toLowerCase())
