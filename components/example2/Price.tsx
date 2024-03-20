@@ -2,7 +2,7 @@
 
 import { useURLQuery } from "@/lib/hooks/useURLQuery";
 export default function Price() {
-  const [price, setPrice] = useURLQuery("price", "0", 500);
+  const [price, setPrice] = useURLQuery("price", "", 500);
 
   return (
     <>

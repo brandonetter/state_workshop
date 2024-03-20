@@ -13,9 +13,7 @@ export function modifySearchParams(
   change: Partial<SearchParams>
 ) {
   const param = queryString.parse(params);
-
   Object.assign(param, change);
-
   const searchParams = queryString.stringify(param, {
     skipEmptyString: true,
   });
