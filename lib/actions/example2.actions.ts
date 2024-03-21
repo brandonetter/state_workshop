@@ -124,5 +124,6 @@ export const getItems = async (filters: {
   search?: string;
   color?: string[] | string;
 }) => {
+  await new Promise((resolve) => setTimeout(resolve, 1500));
   return db.getItems(filters);
 };
