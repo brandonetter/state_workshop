@@ -5,25 +5,14 @@ import ResultCard from "@/components/example2/ResultCard";
 import SearchBar from "@/components/example2/SearchBar";
 import { getItems } from "@/lib/actions/example2.actions";
 
-export default async function Example2({
-  searchParams,
-}: {
-  searchParams: {
-    price?: string;
-    category?: string;
-    color?: string;
-    search?: string;
-  };
-}) {
-  const items = await getItems({
-    ...searchParams,
-  });
+export default async function Example2() {
+  const items = await getItems({});
   return (
     <main className="flex flex-col justify-center items-center h-screen px-20">
       <h1 className="self-start text-black/80">Search</h1>
       <div className="card flex gap-5 w-full h-3/4 !p-0">
         {/* sidebar */}
-        <section className="border-r min-w-[300px] w-[300px]">
+        <section className="w-1/5 border-r">
           <SearchBar />
           {/* filters */}
           <div className="flex flex-col gap-8 justify-between items-start p-3 border-black/10">
